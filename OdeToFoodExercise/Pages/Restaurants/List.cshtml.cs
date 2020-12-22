@@ -17,6 +17,10 @@ namespace OdeToFoodExercise.Pages.Restaurants
 
         public string Message { get; set; }
         public IEnumerable<Restaurant> Restaurants { get; set; }
+        //propiedad que recibe del request  asp-for en razor page
+        [BindProperty (SupportsGet =true)]
+        public string SearchTerm { get; set; }
+        
 
         public ListModel(IConfiguration config, 
                         IRestaurantData restaurantData)
@@ -26,9 +30,11 @@ namespace OdeToFoodExercise.Pages.Restaurants
         }
         public void OnGet()
         {
+            
             Message = config["Message"];
+            
             //trae la data del enumerable creado y con razor se define como se mostrará en el html
-            Restaurants = restaurantData.GetAll();
+            Restaurants = restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }
 }
