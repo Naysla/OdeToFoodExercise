@@ -1,0 +1,15 @@
+{
+  "name": "odetofoodexercise",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naysla/OdeToFoodExercise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Naysla/OdeToFoodExercise/issues"
+  },
+  "homepage": "https://github.com/Naysla/OdeToFoodExercise#readme",
+  "dependencies": {
+    "datatables.net-bs": "^1.10.23"
+  }
+}
