@@ -156,4 +156,10 @@
     <ProjectReference Include="..\OdeToFoodExercise.Data\OdeToFoodExercise.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Startup.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
 </Project>

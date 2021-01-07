@@ -59,12 +59,31 @@ namespace OdeToFoodExercise
                 app.UseHsts();
             }
 
+            app.Use(SavHelloMiddleware);
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseNodeModules(env);
             app.UseCookiePolicy();
 
             app.UseMvc();
+        }
+
+        private RequestDelegate SavHelloMiddleware(
+                                    RequestDelegate next)
+        {
+            
+            return async ctx =>
+            {
+                if (ctx.Request.Path.StartsWithSegments("/hello"))
+                {
+                    await ctx.Response.WriteAsync("Hello , World!");
+                }
+                else
+                {
+                   await next(ctx);
+                }
+                
+            };
         }
     }
 }
