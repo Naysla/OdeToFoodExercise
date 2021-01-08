@@ -1,0 +1,2 @@
+﻿C:\Users\Naysla\source\repos\OdeToFoodExercise\OdeToFoodExercise\OdeToFoodExercise\OdeToFoodExercise.csproj : error  : No se reconoce el subelemento <target> del elemento <Project>.  C:\Users\Naysla\source\repos\OdeToFoodExercise\OdeToFoodExercise\OdeToFoodExercise\OdeToFoodExercise.csproj
+
