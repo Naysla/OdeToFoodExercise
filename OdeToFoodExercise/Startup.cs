@@ -33,6 +33,7 @@ namespace OdeToFoodExercise
 
             //Se configura el la referencia a metodo de interfaz InMemoryRestaurantData
             services.AddScoped<IRestaurantData, SQLRestaurantData>();
+            //services.AddScoped<IRestaurantData, InMemoryRestaurantData>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
